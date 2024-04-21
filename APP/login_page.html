@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Sign up</title>
+        <style>
+            .box{
+                background-color: lightblue;
+                border:2px solid black;
+                width: 450px;
+                height: 550px;
+                margin-top: 35px; 
+                border-radius: 20px;
+            }
+            .box1{
+                background-color: lightblue;
+                border:2px solid black;
+                width: 350px;
+                height: 450px;
+                margin-top: 50px;
+                border-radius: 15px;
+            }
+            body{
+                background-color: aqua;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            input{
+                width: 150px;
+                height: 30px;
+                text-align: center;
+                border: 2px solid black;
+            }
+            button{
+                font-size: 20px;
+                width: 120px;
+                background-color: white;
+                border: 1px solid black;
+            }
+        </style>
+        <body>
+            <center>
+                <h1 style="font-size: 50px;">Welcome</h1>
+                <div class="box">
+                    <div class="box1">
+                        <form >
+                            <h1> Create a Username</h1>
+                            <input type="text" placeholder="username" id="u">
+                            <h1>Create a password</h1>
+                            <input type="password" placeholder="password" id="p1">
+                            <h1>Retype the password</h1>
+                            <input type="password" placeholder="password" id="p2">
+                        </form>
+                        <br><br>
+                        <button type="button" onclick="proceed()">Proceed</button>
+                    </div>
+                </div>
+            </center>
+
+            <script>
+                function proceed() {
+                    var pp1 = document.getElementById("p1").value;
+                    var pp2 = document.getElementById("p2").value;
+                    var us = document.getElementById("u").value;
+            
+                    if (us !== "" && pp1 === pp2 && pp1 !== "" && pp2 !== "") {
+                        window.location.href = "index.html";
+                    }
+                }
+            </script>            
+        </body>
+    </head>
+</html>
