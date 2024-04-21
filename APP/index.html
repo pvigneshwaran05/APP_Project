@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <title>Energy Conservation</title>
   <style>
     body {
+      background-color: rgb(43, 151, 122);
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
@@ -21,7 +23,7 @@
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: #185f8f79;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border: 2px solid black;
       text-align:justify;
@@ -51,7 +53,7 @@
       text-align: justify;
     }
     footer {
-      background-color: #2fda09;
+      background-color: #0994da;
       text-align: center;
       padding: 10px;
       bottom: 0;
@@ -62,56 +64,67 @@
   </style>
 </head>
 <body>
-    <center>
-
-      <header>
-        <h1>Energy Conservation Hub</h1>
-      </header>
-
-      <section style="background-color: lightgreen;margin-top: 1.5%;">
-        <h2>Welcome</h2>
-        <h4>Welcome to our energy conservation guide. Here, you'll find valuable tips to help you
-          save energy and reduce your environmental impact.</h4>
-        </section>
-      <section>
+  <center>
+    <header>
+      <div>
+        <span style="display:flex;justify-content:space-around;">
+          <h1 style="margin-left: 470px;">Energy Conservation Hub</h1>
+          <div style="margin-top: 1%;">
+            <span style="display:flex;justify-content:space-around;">
+              <h1 style="margin-top: 1%;margin-left: 35%;">User:</h1>
+              <button style="font-size:24px;width:250px;height:45px;margin-left: 25px;margin-top: 0%; background-color: white;" id="usn"></button>
+            </span>
+          </div>
+        </span>
+      </div>
+    </header>
+    <section style="background-color: lightgreen;margin-top: 1.5%;">
+      <h2>Welcome</h2>
+      <h4>Welcome to our energy conservation guide. Here, you'll find valuable tips to help you
+        save energy and reduce your environmental impact.</h4>
+    </section>
+    <section>
       <br>
       <center>
-          <div class="tips">
-            <h2 style="margin-left: 290px;color: black;"><strong>Energy Saving Tips</strong></h2>
-            <div class="tip">
-              <h3>1. Use Energy-Efficient Appliances</h3>
-              <p>Upgrade to appliances with the ENERGY STAR label to save electricity and
-                reduce your utility bills.</p>
-            </div>
-            <div class="tip">
-              <h3>2. Turn Off Lights When Not in Use</h3>
-              <p>Remember to turn off lights and electronics when leaving a room to conserve
-                energy.</p>
-            </div>
-            <div class="tip">
-              <h3>3. Adjust Thermostat Settings</h3>
-              <p>Set your thermostat to an energy-saving temperature when you're away or asleep
-                to save on heating and cooling costs.</p>
-            </div>
-            <div class="tip">
-              <h3>4. Unplug Chargers and Devices</h3>
-              <p>Unplug chargers and electronic devices when they're not in use to prevent energy
-                wastage.</p>
-            </div>
+        <div class="tips">
+          <h2 style="margin-left: 290px;color: black;margin-top: 2%;"><strong>Energy Saving Tips</strong></h2>
+          <div class="tip">
+            <h3>1. Use Energy-Efficient Appliances</h3>
+            <p>Upgrade to appliances with the ENERGY STAR label to save electricity and
+              reduce your utility bills.</p>
           </div>
-        </section>
-        <div class="tip" style="background-color: aquamarine;width:750px;height:40px;margin-right: 90px;padding: 0.6%;border: 1px solid black;text-align:center;">
-          <h3>
-            In case you have any queries please contact the website <a href="./ques.html">www.queries.org</a>
-          </h3>
+          <div class="tip">
+            <h3>2. Turn Off Lights When Not in Use</h3>
+            <p>Remember to turn off lights and electronics when leaving a room to conserve
+              energy.</p>
+          </div>
+          <div class="tip">
+            <h3>3. Adjust Thermostat Settings</h3>
+            <p>Set your thermostat to an energy-saving temperature when you're away or asleep
+              to save on heating and cooling costs.</p>
+          </div>
+          <div class="tip">
+            <h3>4. Unplug Chargers and Devices</h3>
+            <p>Unplug chargers and electronic devices when they're not in use to prevent energy
+              wastage.</p>
+          </div>
         </div>
       </center>
-
-    </center>
-
+    </section>
+    <div class="tip" style="background-color: aquamarine;width:750px;height:40px;margin-right: 90px;padding: 0.6%;border: 1px solid black;text-align:center;">
+      <h3>
+        In case you have any queries please contact the website <a href="./ques.html">www.queries.org</a>
+      </h3>
+    </div>
+  </center>
   <footer>
     <p>&copy;  2023 Energy Conservation Guide</p>
     <p> Contact Number : 8072566972</p>
   </footer>
+
+  <script>
+    var u = localStorage.getItem('uname');
+    document.getElementById("usn").textContent = u;
+  </script>
 </body>
 </html>

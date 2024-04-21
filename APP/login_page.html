@@ -57,7 +57,7 @@
     <div class="container">
         <h1>Welcome</h1>
         <form>
-            <input type="text" placeholder="Username" id="u">
+            <input type="text" placeholder="Username (atmost 8 characters)" id="u">
             <input type="password" placeholder="Password" id="p1">
             <input type="password" placeholder="Retype Password" id="p2">
             <button type="button" onclick="proceed()">Proceed</button>
@@ -69,11 +69,12 @@
             var pp1 = document.getElementById("p1").value;
             var pp2 = document.getElementById("p2").value;
             var us = document.getElementById("u").value;
+            localStorage.setItem("uname",us);
     
-            if (us !== "" && pp1 === pp2 && pp1 !== "" && pp2 !== "") {
+            if (us !== "" && pp1 === pp2 && pp1 !== "" && pp2 !== "" && us.length<=8) {
                 window.location.href = "index.html";
             } else {
-                alert("Please fill all fields correctly.");
+                alert("Password might be incorrect or username length exceeded 8 characters");
             }
         }
     </script>
