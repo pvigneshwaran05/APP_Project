@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Energy Conservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            min-height: 100vh; /* Minimum height to cover the viewport */
+        }
+
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            color: #4CAF50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Add margin below the logo */
+        }
+
+        .container {
+            width: 80%; /* 80% of the viewport width */
+            max-width: 600px; /* Maximum width */
+            padding: 20px;
+            text-align: center;
+            background-color: #eaf6ff; /* Light blue background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s forwards;
+            opacity: 0;
+            margin-top: 150px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #username,
+        #message,
+        #getStarted {
+            opacity: 0;
+        }
+
+        #username {
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        #message {
+            animation: slideIn 1s forwards;
+            animation-delay: 1.5s;
+        }
+
+        #getStarted {
+            animation: slideIn 1s forwards;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Increase spacing between elements */
+        h1 {
+            color: #333;
+            margin-bottom: 50px; /* Add margin below the h1 */
+        }
+
+        p {
+            margin-bottom: 50px; /* Add margin below the paragraph */
+            font-size: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Energy <span>Conservation</span></div>
+    <div class="container">
+        <h1 id="greeting">Welcome, <span id="username"></span>!</h1>
+        <p id="message">Welcome to the Energy Conservation Hub. Here, you'll find valuable tips to help you save energy and reduce your environmental impact.</p>
+        <button onclick="redirectToHome()" id="getStarted">Get Started</button>
+    </div>
+
+    <script>
+        function redirectToHome() {
+            // Redirect to the home page
+            window.location.href = "/home";
+        }
+    </script>
+</body>
+</html>
