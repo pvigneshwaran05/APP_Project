@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login_styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome</h1>
-        <form action="/greet" method="post" onsubmit="return proceed()">
-            <input type="text" placeholder="Username" id="u" name="Username">
-            <input type="password" placeholder="Password" id="p1">
-            <input type="password" placeholder="Retype Password" id="p2">
-            <button type="submit" value="submit">Proceed</button>
+        <h1>Welcome Back!</h1>
+        <form action="/greet" method="post" onsubmit="return authenticate()">
+            <input type="text" placeholder="Username" id="username" name="Username">
+            <input type="password" placeholder="Password" id="password">
+            <button type="submit">Login</button>
         </form>
+        <div class="query">
+            <p>Are you new here? <a href="/">Sign up</a></p>
+        </div>
     </div>
 
     <script>
-        function proceed() {
-            var pp1 = document.getElementById("p1").value;
-            var pp2 = document.getElementById("p2").value;
-            var us = document.getElementById("u").value;
-    
-            if (us !== "" && pp1 === pp2 && pp1 !== "" && pp2 !== "") {
+        function authenticate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username !== "" && password !== "") {
                 return true;
             } else {
-                alert("Please fill all fields correctly.");
+                alert("Please enter your username and password.");
                 return false;
             }
         }

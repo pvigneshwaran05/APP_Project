@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Energy Conservation</title>
+  <link rel="stylesheet" href="home-styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  text-align: justify;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: black;
+}
+
+.tips {
+  background-color: lightcoral;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  border: 2px solid black;
+}
+
+.tip {
+  background-color: lightskyblue;
+  width: 650px;
+  height: 130px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+  text-align: justify;
+}
+
+footer {
+  background-color: #a909da;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  width: 160px;
+  height: 20px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+
+.sidebar {
+  position: relative;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .5s ease;
+}
+
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid #262626;
+  margin: 10px 30px;
+  margin-top: -5%;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked~.sidebar {
+  left: 0;
+}
+
+#check:checked~label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked~label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media(max-width : 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar a {
+    height: 60px;
+  }
+
+  .sidebar a i {
+    margin-left: -10px;
+  }
+
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+</style>
+<body>
+    <center>
+      <header>
+        <div style="display:flex;justify-content: space-between;">
+          <h1 style="margin-left: 550px;">Energy Conservation Hub </h1>
+          <h1 style="margin-top: 30;margin-right: 60px;" class="button"> User: <%= name %> </h1>
+        </div>
+      </header>
+    </center>
+
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    
+    <div class="sidebar">
+      <header>MENU</header>
+
+      <a href="#">
+        <i class="fas fa-stream"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Games</span>
+      </a>
+      <a href="#">
+         <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a href="#">
+        <i class="far fa-question-circle"></i>
+        <span>About us</span>
+      </a>
+      <a href="#contacts">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+      <a href="/query">
+        <i class="far fa-envelope"></i>
+        <span>Queries</span>
+      </a>
+    </div>
+
+      <section style="background-color: lightgreen;margin-top: -30%;">
+        <h2>Welcome</h2>
+        <h4>Welcome to our energy conservation guide. Here, you'll find valuable tips to help you
+          save energy and reduce your environmental impact.</h4>
+      </section>
+      <section>
+      <br>
+
+      <center>
+          <div class="tips">
+            <h2 style="margin-left: 290px;color: black;"><strong>Energy Saving Tips</strong></h2>
+            <div class="tip">
+              <h3>1. Use Energy-Efficient Appliances</h3>
+              <p>Upgrade to appliances with the ENERGY STAR label to save electricity and
+                reduce your utility bills.</p>
+            </div>
+            <div class="tip">
+              <h3>2. Turn Off Lights When Not in Use</h3>
+              <p>Remember to turn off lights and electronics when leaving a room to conserve
+                energy.</p>
+            </div>
+            <div class="tip">
+              <h3>3. Adjust Thermostat Settings</h3>
+              <p>Set your thermostat to an energy-saving temperature when you're away or asleep
+                to save on heating and cooling costs.</p>
+            </div>
+            <div class="tip">
+              <h3>4. Unplug Chargers and Devices</h3>
+              <p>Unplug chargers and electronic devices when they're not in use to prevent energy
+                wastage.</p>
+            </div>
+          </div>
+        </section>
+        <div class="tip" style="background-color: aquamarine;width:750px;height:40px;margin-right: 100px;margin-left: 370px;padding: 0.6%;border: 1px solid black;text-align:center;">
+          <h3>
+            In case you have any queries please contact the website <a href="/query">www.queries.org</a>
+          </h3>
+        </div>
+      </center>
+  
+  <footer id="contacts">
+    <p>&copy;  2023 Energy Conservation Guide</p>
+    <p> Contact Number : 8072566972</p>
+  </footer>
+</body>
+</html>
