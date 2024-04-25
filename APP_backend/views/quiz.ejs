@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 200px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .mcq {
+      margin-bottom: 20px;
+    }
+
+    .mcq label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz</h1>
+    <div class="question">
+      <p><%= quiz.question %></p>
+    </div>
+    <form action="/check" method="post">
+    <div class="mcq">
+      <label>
+        <input type="radio" name="q1" value="a"> <%= quiz.optiona %>
+      </label>
+      <label>
+        <input type="radio" name="q1" value="b"> <%= quiz.optionb %>
+      </label>
+      <label>
+        <input type="radio" name="q1" value="c"> <%= quiz.optionc %>
+      </label>
+      <label>
+        <input type="radio" name="q1" value="d"> <%= quiz.optiond %>
+      </label>
+    </div>
+    <div class="navigation">
+      <button href="/check" class="button" id="nextBtn" >Next</button>
+    </form>
+      <a href="/score" class="button" id="submitBtn">Submit</a>
+    </div>
+  </div>
+
+  <!-- <script>
+    // Dummy implementation for navigation buttons
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+
+    prevBtn.addEventListener('click', function() {
+      alert('Move to previous question');
+    });
+
+    nextBtn.addEventListener('click', function() {
+      alert('Move to next question');
+    });
+
+    submitBtn.addEventListener('click', function() {
+      alert('Submit quiz');
+    });
+  </script> -->
+</body>
+</html>

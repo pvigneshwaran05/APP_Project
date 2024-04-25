@@ -8,19 +8,22 @@ body {
     align-items: center;
     height: 100vh;
 }
+
 .container {
     background-color: #fff;
-    border:2px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 40px;
     width: 400px;
     text-align: center;
 }
+
 .container h1 {
     font-size: 32px;
     margin-bottom: 20px;
 }
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -30,17 +33,24 @@ input[type="password"] {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border:2px solid black;
+    border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
 }
+
 button:hover {
     background-color: #45a049;
+}
+
+.query {
+    margin-top: 20px;
+    font-size: 14px;
 }
