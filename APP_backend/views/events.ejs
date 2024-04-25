@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .events {
+      display: flex;
+      /* flex-direction: column; */
+      align-items: center;
+    }
+
+    .event-info {
+      margin: 10px;
+      padding: 20px;
+      background-color: #3498db;
+      border-radius: 10px;
+      width: 250px;
+      height: 200px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .event-info h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .event-info p {
+      color: white;
+    }
+
+    .event-info a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .event-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="events">
+      <div class="event-info">
+        <a href="/quiz"><h2>Quiz</h2></a>
+        <p>Join our exciting quiz events and test your knowledge!</p>
+        <p>Your Recent Score : <%= score %></p>
+        <!-- <a href="quiz.html">Learn More</a> -->
+      </div>
+      <div class="event-info">
+        <a href=""><h2>Blogs</h2></a>
+        <p>Explore our latest blog posts covering a variety of topics.</p>
+        <p>No of Blogs posted by you: 10 </p>
+        <!-- <a href="blogs.html">Read More</a> -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
