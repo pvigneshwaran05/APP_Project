@@ -2,101 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Energy Conservation</title>
+  <title>Green Energy Hub</title>
   <link rel="stylesheet" href="home-styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    
+  </style>
 </head>
 <body>
-    <center>
-      <header>
-        <div style="display:flex;justify-content: space-between;">
-          <h1 style="margin-left: 550px;">Energy Conservation Hub </h1>
-          <h1 style="margin-top: 30;margin-right: 60px;" class="button"> User: <%= name %> </h1>
-        </div>
-      </header>
-    </center>
-
-
-    <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-  
-    
-    <div class="sidebar">
-      <header>MENU</header>
-
-      <a href="/home">
-        <i class="fas fa-stream"></i>
-        <span>Home</span>
-      </a>
-      <a href="#" class="active">
-        <i class="fas fa-qrcode"></i>
-        <span>Games</span>
-      </a>
-      <a href="/events">
-         <i class="fas fa-calendar"></i>
-        <span>Events</span>
-      </a>
-      <a href="#">
-        <i class="far fa-question-circle"></i>
-        <span>About us</span>
-      </a>
-      <a href="#contacts">
-        <i class="far fa-envelope"></i>
-        <span>Contact</span>
-      </a>
-      <a href="/query">
-        <i class="far fa-envelope"></i>
-        <span>Queries</span>
-      </a>
+  <div class="top-bar">
+    <div class="user-pill">
+      <i class="fas fa-user"></i>
+      <span><%= name %></span>
     </div>
+  </div>
 
-      <section style="background-color: lightgreen;margin-top: -30%;">
-        <h2>Welcome</h2>
-        <h4>Welcome to our energy conservation guide. Here, you'll find valuable tips to help you
-          save energy and reduce your environmental impact.</h4>
-      </section>
-      <section>
-      <br>
+  <nav class="sidebar">
+    <div class="logo">
+      <h1>Green Energy Hub</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/home"><i class="fas fa-home"></i><span>Home</span></a></li>
+      <li><a href="#"><i class="fas fa-gamepad"></i><span>Games</span></a></li>
+      <li><a href="/events"><i class="fas fa-calendar-alt"></i><span>Events</span></a></li>
+      <li><a href="#"><i class="fas fa-info-circle"></i><span>About Us</span></a></li>
+      <li><a href="#contacts"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+      <li><a href="/query"><i class="fas fa-question-circle"></i><span>Queries</span></a></li>
+    </ul>
+  </nav>
 
-      <center>
-          <div class="tips">
-            <h2 style="margin-left: 290px;color: black;"><strong>Energy Saving Tips</strong></h2>
-            <div class="tip">
-              <h3>1. Use Energy-Efficient Appliances</h3>
-              <p>Upgrade to appliances with the ENERGY STAR label to save electricity and
-                reduce your utility bills.</p>
-            </div>
-            <div class="tip">
-              <h3>2. Turn Off Lights When Not in Use</h3>
-              <p>Remember to turn off lights and electronics when leaving a room to conserve
-                energy.</p>
-            </div>
-            <div class="tip">
-              <h3>3. Adjust Thermostat Settings</h3>
-              <p>Set your thermostat to an energy-saving temperature when you're away or asleep
-                to save on heating and cooling costs.</p>
-            </div>
-            <div class="tip">
-              <h3>4. Unplug Chargers and Devices</h3>
-              <p>Unplug chargers and electronic devices when they're not in use to prevent energy
-                wastage.</p>
-            </div>
-          </div>
-        </section>
-        <div class="tip" style="background-color: aquamarine;width:750px;height:40px;margin-right: 100px;margin-left: 370px;padding: 0.6%;border: 1px solid black;text-align:center;">
-          <h3>
-            In case you have any queries please contact the website <a href="/query">www.queries.org</a>
-          </h3>
+  <main class="main-content">
+    <section class="hero">
+      <h2>Welcome to Green Energy Hub</h2>
+      <p>Join us in creating a sustainable future through smart energy conservation. Discover tips, tools, and resources to reduce your carbon footprint and save on energy costs.</p>
+    </section>
+
+    <section class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">
+          <i class="fas fa-plug"></i>
         </div>
-      </center>
-  
+        <h3>Smart Appliances</h3>
+        <p>Upgrade to ENERGY STAR certified appliances and save up to 30% on your electricity bills while helping the environment.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Lighting Efficiency</h3>
+        <p>Switch to LED bulbs and use natural light when possible. Turn off lights in empty rooms to conserve energy.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <i class="fas fa-thermometer-half"></i>
+        </div>
+        <h3>Temperature Control</h3>
+        <p>Optimize your thermostat settings. Every degree adjustment can lead to significant energy savings over time.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">
+          <i class="fas fa-power-off"></i>
+        </div>
+        <h3>Standby Power</h3>
+        <p>Eliminate phantom energy usage by unplugging devices when not in use or using smart power strips.</p>
+      </div>
+    </section>
+
+    <div class="query-banner">
+      <h3>Need Help? We're Here!</h3>
+      <p>Visit our <a href="/query">Query Page</a> for personalized assistance with your energy conservation journey.</p>
+    </div>
+  </main>
+
   <footer id="contacts">
-    <p>&copy;  2023 Energy Conservation Guide</p>
-    <p> Contact Number : 8072566972</p>
+    <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
   </footer>
 </body>
 </html>

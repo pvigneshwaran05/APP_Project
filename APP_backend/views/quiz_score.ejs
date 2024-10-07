@@ -2,67 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Result</title>
+  <title>Green Energy Hub - Quiz Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quiz_score.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 100px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-top: 200px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    .score {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    .button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 100px;
-    }
-
-    .button:hover {
-      background-color: #0056b3;
-    }
+    
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Quiz Result</h1>
-    <div class="score">
-      <p>Score: <strong id="userScore"><%= score %></strong></p>
+  <div class="top-bar">
+    <div class="user-pill">
+      <i class="fas fa-user"></i>
+      <span>John Doe</span>
     </div>
-    <a href="/home" class="button">Go to Home Page</a>
   </div>
 
-  <!-- <script>
-    // Dummy implementation for getting user score and maximum score
-    const userScore = 8; // Replace with actual user score
-    const maxScore = 10; // Replace with actual maximum score
+  <main class="main-content">
+    <div class="result-container">
+      <div class="result-header">
+        <h1>Quiz Result</h1>
+        <p>Great job completing the Energy Conservation Quiz!</p>
+      </div>
+      
+      <div class="score">
+        <p>Your Score: <strong><%= score %></strong></p>
+      </div>
+      
+      <a href="/home" class="btn btn-primary">Back to Home</a>
+    </div>
+  </main>
 
-    document.getElementById('userScore').textContent = userScore;
-    document.getElementById('maxScore').textContent = maxScore;
-  </script> -->
+  <footer>
+    <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
+  </footer>
 </body>
 </html>

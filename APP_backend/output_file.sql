@@ -184,3 +184,16 @@ ALTER TABLE ONLY public.users
 -- PostgreSQL database dump complete
 --
 
+
+create table blogs(
+	blogId serial primary key,
+	userid int,
+	heading varchar,
+	content varchar,
+	postedDate date,
+	constraint fk_2 foreign key(userid) references users(id)
+)
+
+
+
+select heading,username,content,posteddate from blogs inner join users on blogs.userid = users.id

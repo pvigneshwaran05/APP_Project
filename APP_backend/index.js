@@ -9,10 +9,10 @@ env.config();
 
 
 const db = new pg.Client({
-    user : "postgres",
+    user : process.env.DATABASE_USER,
     host : "localhost",
-    database : "APP",
-    password : process.env.PASSWORD,
+    database : process.env.DATABASE_NAME,
+    password : process.env.DATABASE_PASS,
     port : 5432,
 });
 
@@ -22,6 +22,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 var username;
+var currentUser;
+var data;
 
 app.get("/",(req,res)=>{
     res.render("signup.ejs");
@@ -42,9 +44,14 @@ app.post("/datasingnup",async(req,res)=>{
         res.render("inter_signup.ejs");
     }
     else{
-        db.query("Insert into users(email,username,password) values ($1,$2,$3)",[email,username,password]);
+        await db.query("Insert into users(email,username,password) values ($1,$2,$3)",[email,username,password]);
+        data = await db.query("select * from users where username = $1",[username]);
+        currentUser = data.rows[0];
+
         res.render("greet_page.ejs",{name : username});
     }
+
+    
 
 })
 
@@ -56,6 +63,8 @@ app.post("/datalogin",async(req,res)=>{
     if(response.rows.length > 0){
     var checkPassword = response.rows[0].password;
     if(password==checkPassword){
+        data = await db.query("select * from users where username = $1",[username]);
+        currentUser = data.rows[0];
         res.render("greet_page.ejs",{name : username});
     }
     else{
@@ -113,7 +122,7 @@ app.post("/check",async(req,res)=>{
     // console.log(currentScore);
     quesNumber++;
     res.render("quiz.ejs",{name : username,quiz : quiz[quesNumber]});
-})
+});
 
 app.get("/score",async(req,res)=>{
     var score = currentScore;
@@ -121,8 +130,33 @@ app.get("/score",async(req,res)=>{
     quesNumber=0;
     currentScore=0;
     res.render("quiz_score.ejs",{name : username,score : score});
-})
+});
+
+
+var blogData;
+
+
+app.get("/blogs",async(req,res)=>{
+    data = await db.query("select heading,username,content,posteddate from blogs inner join users on blogs.userid = users.id");
+    blogData = data.rows;
+    // console.log(currentUser.username);
+
+    res.render("blog.ejs",{blogs : blogData, user : currentUser});
+});
+
+
+app.get("/new-blog",async(req,res)=>{
+    res.render("createBlog.ejs",{user : currentUser});
+});
+
+app.post("/post-blog",async(req,res)=>{
+    var title = req.body.title;
+    var content = req.body.content;
+
+    await db.query("insert into blogs(userid, heading, content, posteddate) values($1,$2,$3,CURRENT_DATE)",[currentUser.id, title, content]);
+    res.redirect("/blogs");
+});
 
 app.listen(port,()=>{
     console.log("Listening on port "+port);
-})
+});
