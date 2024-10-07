@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Games | Energy Conservation</title>
+    <link rel="stylesheet" href="home-styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #2ecc71; /* Green background */
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .game-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .game-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 1000px;
+        margin-top: -450px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 500px; /* Adjust width as needed */
+        height: 550px;
+      }
+
+      .game-card img {
+        width: 100%;
+        height: 200px; /* Adjust height as needed */
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .game-card button {
+        background-color: #3498db; /* Blue button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <div style="display: flex; justify-content: space-between">
+          <h1 style="margin-left: 550px">Energy Conservation Hub</h1>
+          <h1 style="margin-top: 30;margin-right: 60px;" class="button"> User: <%= name %> </h1>
+        </div>
+      </header>
+    </center>
+
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+
+    <div class="sidebar">
+      <header>MENU</header>
+
+      <a href="/home">
+        <i class="fas fa-stream"></i>
+        <span>Home</span>
+      </a>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Games</span>
+      </a>
+      <a href="/events">
+        <i class="fas fa-calendar"></i>
+        <span>Events</span>
+      </a>
+      <a href="#">
+        <i class="far fa-question-circle"></i>
+        <span>About us</span>
+      </a>
+      <a href="#contacts">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+      <a href="/query">
+        <i class="far fa-envelope"></i>
+        <span>Queries</span>
+      </a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-card">
+        <img src="game1.png" alt="game" style="height: auto" />
+        <h1>
+          <strong
+            ><a href="https://pbskids.org/designsquad/games/fidgit_power/"
+              >Fidgit power</a
+            ></strong
+          >
+        </h1>
+        <p>
+          In Fidget Power, design wind turbines that make electricity and keep
+          the air and water clean.
+        </p>
+      </div>
+
+      <div class="game-card">
+        <img src="game2.png" alt="game" style="height: auto" />
+        <h1>
+          <strong
+            ><a href="https://school-gen-stage-2.herokuapp.com/iframe.html"
+              >Crunch Time</a
+            ></strong
+          >
+        </h1>
+        <p>
+          Crunch Time is a fun quiz game from New Zealand. Earn points and
+          badges across several levels.
+        </p>
+      </div>
+
+      <div class="game-card">
+        <img src="game3.png" alt="game" style="height: auto" />
+        <h1>
+          <strong
+            ><a href="https://pbskids.org/cyberchase/games/watts-trouble"
+              >Watts of Trouble</a
+            ></strong
+          >
+        </h1>
+        <p>
+          Use renewable energy sources from sun, water and wind to power the
+          rides at the fair. Watch out for Hacker!
+        </p>
+      </div> 
+    </div>
+
+    
+
+    <footer id="contacts">
+      <strong>
+        <p>&copy;  2023 Energy Conservation Guide</p>
+        <p> Contact Number : 8072566972</p>
+      </strong>
+    </footer>
+  </body>
+</html>
+
