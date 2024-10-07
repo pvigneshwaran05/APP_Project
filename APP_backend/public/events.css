@@ -22,7 +22,7 @@
       line-height: 1.6;
     }
 
-    /* Header Styles */
+    /* Top Bar Styles */
     .top-bar {
       background-color: var(--primary-color);
       padding: 0.5rem 2rem;
@@ -51,6 +51,7 @@
       background-color: var(--white);
       box-shadow: 2px 0 5px rgba(0,0,0,0.1);
       padding-top: 2rem;
+      z-index: 1000;
     }
 
     .logo {
@@ -93,71 +94,81 @@
       padding: 2rem;
     }
 
-    .hero {
-      background-color: var(--white);
-      border-radius: 15px;
-      padding: 2rem;
+    .page-title {
+      text-align: center;
       margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .hero h2 {
-      font-size: 2rem;
       color: var(--primary-color);
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
-    /* Tips Grid */
-    .tips-grid {
+    .events-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
-    .tip-card {
+    .event-card {
       background-color: var(--white);
       border-radius: 15px;
-      padding: 1.5rem;
+      overflow: hidden;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
 
-    .tip-card:hover {
+    .event-card:hover {
       transform: translateY(-10px);
     }
 
-    .tip-icon {
+    .event-header {
       background-color: var(--primary-color);
       color: var(--white);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .event-header i {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
-    .tip-card h3 {
+    .event-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .event-stat {
+      background-color: var(--light-bg);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
       color: var(--primary-color);
       margin-bottom: 0.5rem;
     }
 
-    /* Query Section */
-    .query-banner {
-      background-color: var(--accent-color);
-      border-radius: 15px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      text-align: center;
-      color: var(--text-color);
+    .event-action {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
     }
 
-    .query-banner a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 600;
+    .event-action:hover {
+      background-color: var(--secondary-color);
     }
 
     /* Footer */
@@ -167,7 +178,6 @@
       color: var(--white);
       text-align: center;
       padding: 1rem;
-      border-radius: 15px 15px 0 0;
     }
 
     /* Responsive Design */
@@ -186,7 +196,7 @@
         margin-left: 70px;
       }
       
-      .hero h2 {
-        font-size: 1.5rem;
+      .page-title {
+        font-size: 2rem;
       }
     }

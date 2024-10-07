@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Green Energy Hub - Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="user-pill">
+      <i class="fas fa-user"></i>
+      <span><%= user.username %></span>
+    </div>
+  </div>
+
+  <nav class="sidebar">
+    <div class="logo">
+      <h1>Green Energy Hub</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/home"><i class="fas fa-home"></i><span>Home</span></a></li>
+      <li><a href="#"><i class="fas fa-gamepad"></i><span>Games</span></a></li>
+      <li><a href="/events"><i class="fas fa-calendar-alt"></i><span>Events</span></a></li>
+      <li><a href="#"><i class="fas fa-info-circle"></i><span>About Us</span></a></li>
+      <li><a href="#contacts"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+      <li><a href="/query"><i class="fas fa-question-circle"></i><span>Queries</span></a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div class="main-content-header">
+      <h1 class="content-title">Energy Blogs</h1>
+      <a href="/new-blog" class="btn-new-blog">
+        <i class="fas fa-pen"></i> Write New Blog
+      </a>
+
+      <!-- <a href="/myBlog" class="btn-new-blog">
+        <i class="fas fa-pen"></i> View My Blogs
+      </a> -->
+      
+    </div>
+
+    <% blogs.forEach(function(blog) { %>
+      <div class="blog-container">
+        <h2 class="blog-heading"><%= blog.heading %></h2>
+        <div class="blog-info">
+          <span>
+            <i class="fas fa-user"></i>
+            <%= blog.username %>
+          </span>
+          <span>
+            <i class="far fa-calendar"></i>
+            <%= blog.posteddate.toDateString() %>
+          </span>
+          <span>
+            <i class="far fa-clock"></i>
+            5 min read
+          </span>
+        </div>
+        <div class="blog-content">
+          <p><%= blog.content %></p>
+        </div>
+        <div class="blog-footer">
+          <div class="blog-tags">
+            <span class="tag">Energy</span>
+            <span class="tag">Sustainability</span>
+          </div>
+          <div class="blog-actions">
+            <button><i class="far fa-heart"></i> 15</button>
+            <button><i class="far fa-comment"></i> 5</button>
+            <button><i class="far fa-bookmark"></i> Save</button>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+    
+    <div class="navigation-buttons">
+      <a href="/home" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
+  </footer>
+</body>
+</html>
