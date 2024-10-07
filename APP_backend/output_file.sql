@@ -197,3 +197,11 @@ create table blogs(
 
 
 select heading,username,content,posteddate from blogs inner join users on blogs.userid = users.id
+
+
+--Blogs content
+
+-- 1,4,The Importance of Energy Conservation in Daily Life,"Energy conservation is one of the simplest and most effective ways to reduce greenhouse gas emissions and help combat climate change. It can be achieved through small, everyday actions such as turning off lights when they are not in use, unplugging devices that are fully charged, and opting for energy-efficient appliances. These seemingly minor changes can add up to significant energy savings over time. Moreover, being mindful of energy usage not only benefits the environment but also leads to financial savings, lowering utility bills and reducing our carbon footprint.",2024-10-06,wabcd
+-- 2,5,Smart Homes and Energy Efficiency,"Smart home technology is revolutionizing how we interact with energy in our daily lives. With devices like smart thermostats, energy-efficient lighting systems, and automated appliances, it is easier than ever to monitor and reduce energy consumption. For example, smart thermostats can learn your schedule and adjust heating and cooling accordingly, minimizing energy waste. Energy-efficient lighting, such as LEDs, uses significantly less power than traditional bulbs and lasts much longer. These advancements make it simple for homeowners to conserve energy without sacrificing comfort or convenience.",2024-10-06,wabcd
+-- 3,6,Renewable Energy and Its Role in Energy Conservation,"As global awareness of climate change grows, the role of renewable energy in energy conservation becomes increasingly important. Solar, wind, hydro, and geothermal power are sustainable alternatives to fossil fuels that do not deplete finite resources or release harmful pollutants. By incorporating renewable energy sources into our power grid, we can significantly reduce our reliance on non-renewable energy sources like coal and oil. Additionally, advancements in energy storage technology allow us to store excess energy generated during peak production times, making renewables a reliable energy source around the clock.",2024-10-06,wabcd
+-- 4,1,save water save life,water is precious...,2024-10-07,
