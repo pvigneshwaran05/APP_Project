@@ -2,159 +2,163 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Games | Energy Conservation</title>
+    <title>Games | Green Energy Hub</title>
     <link rel="stylesheet" href="home-styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <style>
-      body {
-        background-color: #2ecc71; /* Green background */
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-
       .game-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 2rem 0;
       }
 
       .game-card {
-        background-color: white;
-        border-radius: 10px;
-        padding: 10px;
-        margin-bottom: 1000px;
-        margin-top: -450px;
+        background-color: var(--white);
+        border-radius: 15px;
+        padding: 1.5rem;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 500px; /* Adjust width as needed */
-        height: 550px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .game-card:hover {
+        transform: translateY(-10px);
       }
 
       .game-card img {
         width: 100%;
-        height: 200px; /* Adjust height as needed */
+        height: 200px;
         object-fit: cover;
         border-radius: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
       }
 
-      .game-card button {
-        background-color: #3498db; /* Blue button */
-        color: white;
-        padding: 10px 20px;
-        border: none;
+      .game-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .game-card a {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 0.5rem 1rem;
         border-radius: 5px;
-        cursor: pointer;
+        text-decoration: none;
+        margin-top: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .game-card a:hover {
+        background-color: var(--secondary-color);
       }
     </style>
   </head>
   <body>
-    <center>
-      <header>
-        <div style="display: flex; justify-content: space-between">
-          <h1 style="margin-left: 550px">Energy Conservation Hub</h1>
-          <h1 style="margin-top: 30;margin-right: 60px;" class="button"> User: <%= name %> </h1>
+    <div class="top-bar">
+      <div class="user-pill">
+        <i class="fas fa-user"></i>
+        <span><%= name %></span>
+      </div>
+    </div>
+
+    <nav class="sidebar">
+      <div class="logo">
+        <h1>Green Energy Hub</h1>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/home"><i class="fas fa-home"></i><span>Home</span></a>
+        </li>
+        <li>
+          <a href="/games" class="active"
+            ><i class="fas fa-gamepad"></i><span>Games</span></a
+          >
+        </li>
+        <li>
+          <a href="/events"
+            ><i class="fas fa-calendar-alt"></i><span>Events</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fas fa-info-circle"></i><span>About Us</span></a
+          >
+        </li>
+        <li>
+          <a href="#contacts"
+            ><i class="fas fa-envelope"></i><span>Contact</span></a
+          >
+        </li>
+        <li>
+          <a href="/query"
+            ><i class="fas fa-question-circle"></i><span>Queries</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section class="hero">
+        <h2>Energy Conservation Games</h2>
+        <p>
+          Explore these fun and educational games to learn more about energy
+          conservation and sustainable practices. Challenge yourself and make a
+          positive impact on the environment!
+        </p>
+      </section>
+
+      <div class="game-container">
+        <div class="game-card">
+          <img src="game1.png" alt="Fidget Power" />
+          <h3>Fidget Power</h3>
+          <p>
+            Design wind turbines that generate electricity and keep the air and
+            water clean.
+          </p>
+          <a
+            href="https://pbskids.org/designsquad/games/fidgit_power/"
+            target="_blank"
+            >Play Now</a
+          >
         </div>
-      </header>
-    </center>
 
-    <input type="checkbox" id="check" />
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-
-    <div class="sidebar">
-      <header>MENU</header>
-
-      <a href="/home">
-        <i class="fas fa-stream"></i>
-        <span>Home</span>
-      </a>
-      <a href="#" class="active">
-        <i class="fas fa-qrcode"></i>
-        <span>Games</span>
-      </a>
-      <a href="/events">
-        <i class="fas fa-calendar"></i>
-        <span>Events</span>
-      </a>
-      <a href="#">
-        <i class="far fa-question-circle"></i>
-        <span>About us</span>
-      </a>
-      <a href="#contacts">
-        <i class="far fa-envelope"></i>
-        <span>Contact</span>
-      </a>
-      <a href="/query">
-        <i class="far fa-envelope"></i>
-        <span>Queries</span>
-      </a>
-    </div>
-
-    <div class="game-container">
-      <div class="game-card">
-        <img src="game1.png" alt="game" style="height: auto" />
-        <h1>
-          <strong
-            ><a href="https://pbskids.org/designsquad/games/fidgit_power/"
-              >Fidgit power</a
-            ></strong
+        <div class="game-card">
+          <img src="game2.png" alt="Crunch Time" />
+          <h3>Crunch Time</h3>
+          <p>
+            A fun quiz game from New Zealand. Earn points and badges across
+            several levels.
+          </p>
+          <a
+            href="https://school-gen-stage-2.herokuapp.com/iframe.html"
+            target="_blank"
+            >Play Now</a
           >
-        </h1>
-        <p>
-          In Fidget Power, design wind turbines that make electricity and keep
-          the air and water clean.
-        </p>
+        </div>
+
+        <div class="game-card">
+          <img src="game3.png" alt="Watts of Trouble" />
+          <h3>Watts of Trouble</h3>
+          <p>
+            Use renewable energy sources to power fair rides. Watch out for
+            Hacker!
+          </p>
+          <a
+            href="https://pbskids.org/cyberchase/games/watts-trouble"
+            target="_blank"
+            >Play Now</a
+          >
+        </div>
       </div>
-
-      <div class="game-card">
-        <img src="game2.png" alt="game" style="height: auto" />
-        <h1>
-          <strong
-            ><a href="https://school-gen-stage-2.herokuapp.com/iframe.html"
-              >Crunch Time</a
-            ></strong
-          >
-        </h1>
-        <p>
-          Crunch Time is a fun quiz game from New Zealand. Earn points and
-          badges across several levels.
-        </p>
-      </div>
-
-      <div class="game-card">
-        <img src="game3.png" alt="game" style="height: auto" />
-        <h1>
-          <strong
-            ><a href="https://pbskids.org/cyberchase/games/watts-trouble"
-              >Watts of Trouble</a
-            ></strong
-          >
-        </h1>
-        <p>
-          Use renewable energy sources from sun, water and wind to power the
-          rides at the fair. Watch out for Hacker!
-        </p>
-      </div> 
-    </div>
-
-    
+    </main>
 
     <footer id="contacts">
-      <strong>
-        <p>&copy;  2023 Energy Conservation Guide</p>
-        <p> Contact Number : 8072566972</p>
-      </strong>
+      <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
     </footer>
   </body>
 </html>
-

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary-color: #2ecc71;
+      --secondary-color: #27ae60;
+      --accent-color: #f1c40f;
+      --text-color: #2c3e50;
+      --light-bg: #ecf0f1;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Top Bar Styles */
+    .top-bar {
+      background-color: var(--primary-color);
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .user-pill {
+      background-color: var(--secondary-color);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 250px;
+      background-color: var(--white);
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      padding-top: 2rem;
+      z-index: 1000;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo h1 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      list-style: none;
+    }
+
+    .nav-links li a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    .nav-links li a i {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-card {
+      background-color: var(--white);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .event-header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .event-header i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .event-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .event-stat {
+      background-color: var(--light-bg);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .event-action {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .event-action:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Footer */
+    footer {
+      margin-left: 250px;
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 70px;
+      }
+      
+      .sidebar .logo h1,
+      .sidebar .nav-links li a span {
+        display: none;
+      }
+      
+      .main-content,
+      footer {
+        margin-left: 70px;
+      }
+      
+      .page-title {
+        font-size: 2rem;
+      }
+    }
