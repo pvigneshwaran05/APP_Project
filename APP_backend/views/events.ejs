@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Green Energy Hub - Events</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="events.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <style>
-    
-  </style>
-</head>
-<body>
-  <div class="top-bar">
-    <div class="user-pill">
-      <i class="fas fa-user"></i>
-      <span><%= name %></span>
-    </div>
-  </div>
-
-  <nav class="sidebar">
-    <div class="logo">
-      <h1>Green Energy Hub</h1>
-    </div>
-    <ul class="nav-links">
-      <li><a href="/home"><i class="fas fa-home"></i><span>Home</span></a></li>
-      <li><a href="#"><i class="fas fa-gamepad"></i><span>Games</span></a></li>
-      <li><a href="/events" class="active"><i class="fas fa-calendar-alt"></i><span>Events</span></a></li>
-      <li><a href="#"><i class="fas fa-info-circle"></i><span>About Us</span></a></li>
-      <li><a href="#contacts"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-      <li><a href="/query"><i class="fas fa-question-circle"></i><span>Queries</span></a></li>
-    </ul>
-  </nav>
-
-  <main class="main-content">
-    <h1 class="page-title">Activities & Events</h1>
-    
-    <div class="events-grid">
-      <div class="event-card">
-        <div class="event-header">
-          <i class="fas fa-question-circle"></i>
-          <h2>Energy Quiz</h2>
-          <p>Test your knowledge on energy conservation</p>
-        </div>
-        <div class="event-body">
-          <p>Challenge yourself with our interactive quiz and learn more about sustainable energy practices!</p>
-          <div class="event-stat">
-            <div class="stat-number"><%= score %></div>
-            <p>Your Recent Score</p>
-          </div>
-          <a href="/quiz" class="event-action">Take Quiz</a>
-        </div>
-      </div>
-
-      <div class="event-card">
-        <div class="event-header">
-          <i class="fas fa-blog"></i>
-          <h2>Green Blogs</h2>
-          <p>Share your eco-friendly journey</p>
-        </div>
-        <div class="event-body">
-          <p>Explore and contribute to our community's collection of environmental blog posts.</p>
-          <div class="event-stat">
-            <div class="stat-number">10</div>
-            <p>Blogs Posted by You</p>
-          </div>
-          <a href="/blogs" class="event-action">Write Blog</a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Green Energy Hub - Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="events.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="user-pill">
+        <i class="fas fa-user"></i>
+        <span><%= name %></span>
       </div>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
-  </footer>
-</body>
+    <nav class="sidebar">
+      <div class="logo">
+        <h1>Green Energy Hub</h1>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/home"><i class="fas fa-home"></i><span>Home</span></a>
+        </li>
+        <li>
+          <a href="/games"><i class="fas fa-gamepad"></i><span>Games</span></a>
+        </li>
+        <li>
+          <a href="/events" class="active"
+            ><i class="fas fa-calendar-alt"></i><span>Events</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fas fa-info-circle"></i><span>About Us</span></a
+          >
+        </li>
+        <li>
+          <a href="#contacts"
+            ><i class="fas fa-envelope"></i><span>Contact</span></a
+          >
+        </li>
+        <li>
+          <a href="/query"
+            ><i class="fas fa-question-circle"></i><span>Queries</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="page-title">Activities & Events</h1>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-header">
+            <i class="fas fa-question-circle"></i>
+            <h2>Energy Quiz</h2>
+            <p>Test your knowledge on energy conservation</p>
+          </div>
+          <div class="event-body">
+            <p>
+              Challenge yourself with our interactive quiz and learn more about
+              sustainable energy practices!
+            </p>
+            <div class="event-stat">
+              <div class="stat-number"><%= score %></div>
+              <p>Your Recent Score</p>
+            </div>
+            <a href="/quiz" class="event-action">Take Quiz</a>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-header">
+            <i class="fas fa-blog"></i>
+            <h2>Green Blogs</h2>
+            <p>Share your eco-friendly journey</p>
+          </div>
+          <div class="event-body">
+            <p>
+              Explore and contribute to our community's collection of
+              environmental blog posts.
+            </p>
+            <div class="event-stat">
+              <div class="stat-number">10</div>
+              <p>Blogs Posted by You</p>
+            </div>
+            <a href="/blogs" class="event-action">Write Blog</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Green Energy Hub | Contact: (807) 256-6972</p>
+    </footer>
+  </body>
 </html>
