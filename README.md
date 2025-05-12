@@ -20,3 +20,6 @@ Database: PostgreSQL
 AI Integration: Gemini AI for evaluating daily reflections
 
 This project aims to empower users to reduce their carbon footprint and contribute to a greener future through engaging, educational, and data-driven tools.
+
+
+![Screenshot 2025-05-12 131146](https://github.com/user-attachments/assets/9055d3a8-37d6-4785-9e0c-2c3f3ac27236)
