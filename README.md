@@ -27,4 +27,4 @@ This project aims to empower users to reduce their carbon footprint and contribu
 ![Screenshot 2025-05-12 131230](https://github.com/user-attachments/assets/cee6a42f-250e-478c-bd1f-ed9a73923053)
 ![Screenshot 2025-05-12 131316](https://github.com/user-attachments/assets/828a298e-532d-4178-93d5-ab07961628d3)
 ![Screenshot 2025-05-12 131337](https://github.com/user-attachments/assets/c24a6fac-a4b3-4199-be03-04b6b356c4f7)
-
+![Screenshot 2025-05-12 131351](https://github.com/user-attachments/assets/cc7c824f-9e20-4ddf-9259-95cbcc1c8ac7)
